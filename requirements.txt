@@ -1,0 +1,6 @@
+streamlit
+supabase
+streamlit-folium
+folium
+geopy
+streamlit-geolocation
