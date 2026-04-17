@@ -8,8 +8,32 @@ from features.matching import calculate_match_score
 from geopy.distance import geodesic
 from streamlit_geolocation import streamlit_geolocation
 
-st.set_page_config(layout="wide")
+st.markdown(
+    """
+    <style>
+    
+    /* Hide Streamlit deploy button (bottom right) */
+    .stDeployButton {display:none;}
 
+    /* Hide GitHub / Fork / menu icons (top right) */
+    header {visibility: hidden;}
+
+    /* Hide hamburger menu */
+    #MainMenu {visibility: hidden;}
+
+    /* Hide footer */
+    footer {visibility: hidden;}
+
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+st.set_page_config(
+    page_title="Universal Lost & Found System",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
 st.title("Universal Lost & Found System")
 
 menu = st.sidebar.radio(
